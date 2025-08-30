@@ -1,0 +1,210 @@
+/* ============ Footer Base ============ */
+.site-footer{
+  background: var(--bage);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  color: #1f2a2b;
+  
+}
+
+.foot-inner{
+  padding: 32px 0 18px; /* ↑ مسافة عمودية أعلى وأسفل */
+  
+}
+
+/* اللوجو + الاسم */
+.brand-block{ 
+  text-align: center; 
+  gap: 12px;             /* ↑ مسافة بين اللوجو والنبذة */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.brand-row{ justify-content: center; }
+.foot-logo{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.05));
+}
+.foot-brand{
+  font-weight: 800;
+  color: var(--blue);
+}
+.foot-desc{
+  opacity: .9;
+  line-height: 1.6;     /* ↑ ارتفاع سطر */
+  max-width: 340px;     /* ↑ قليلًا */
+}
+
+/* عناوين الأعمدة */
+.foot-title{
+  font-weight: 800 !important;
+  margin: 0 0 14px;     /* ↑ مسافة تحت العنوان */
+  position: relative;
+  display: flex;
+  white-space: nowrap;  /* يبقى العنوان سطر واحد */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.foot-title::after{
+  content:"";
+  display:block;
+  height:3px;
+  width:42px;
+  border-radius: 3px;
+  margin-top: 6px;
+  background: var(--brown);
+}
+
+/* عناصر سطرية (هاتف، بريد، موقع) */
+.foot-lines{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;            /* ↑ مسافة بين السطور */
+  margin-top: 6px;
+}
+.foot-line{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  opacity: .95;
+  transition: opacity .2s ease;
+}
+.foot-line:hover{ opacity: 1; }
+.foot-line i{ color: var(--blue); }
+
+/* روابط القوائم */
+.foot-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;             /* ↑ مسافة بين الروابط */
+  justify-content: center;
+  align-items: center;
+}
+.foot-list a{
+  text-decoration: none;
+  color: inherit;
+  opacity: .9;
+  line-height: 1.5;     /* ↑ ارتفاع سطر */
+}
+.foot-list a:hover{ opacity: 1; text-decoration: underline; }
+
+/* السوشيال */
+.social{
+  margin-top: 12px;     /* ↑ مسافة فوق الأيقونات */
+  gap: 8px;             /* ↑ مسافة بين الأيقونات */
+  display: flex;
+  flex-wrap: wrap;
+}
+.social a{
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius: 999px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.06);
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+  text-decoration:none;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.social a i{ font-size:16px; color: var(--blue); }
+.social a:hover{ transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.1); }
+
+/* الشريط السفلي */
+.foot-bottom{
+  background: var(--brown);
+  margin-top: 16px;     /* ↑ مسافة قبل الشريط */
+  padding: 12px 0;      /* ↑ ارتفاع الشريط */
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+.foot-copy{
+  display: block;
+  text-align: center;
+  opacity: .8;
+  color: #fff;
+}
+
+/* ============ تخطيط الأعمدة ============ */
+/* على الديسكتوب: 4 أعمدة متساوية */
+@media (min-width: 900px){
+  .site-footer .MuiGrid-container{
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+  .site-footer .MuiGrid-item{
+    flex: 0 0 25%;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* ============ اتجاه النص ============ */
+[dir="rtl"] .foot-title,
+[dir="rtl"] .foot-list,
+[dir="rtl"] .foot-lines{ text-align: right; }
+
+[dir="ltr"] .foot-title,
+[dir="ltr"] .foot-list,
+[dir="ltr"] .foot-lines{ text-align: left; }
+
+/* ============ تحسين الموبايل فقط ============ */
+@media (max-width: 900px){
+  .foot-inner{ padding: 24px 0 14px; }
+
+  /* كل عمود يمتلئ العرض ويتوسّط داخليًا */
+  .site-footer .MuiGrid-container{
+    row-gap: 28px;                 /* ↑ مسافة بين الأعمدة */
+    justify-content: center;
+  }
+  .site-footer .MuiGrid-item{
+    width: 100%;
+    max-width: 560px;              /* يمنع التمدد الزائد */
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;           /* توسيط المحتوى */
+    gap: 14px;                     /* ↑ مسافة داخل العمود */
+    padding-block: 8px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .site-footer .MuiGrid-item:first-child{
+    border-top: 0;                 /* بدون فاصل فوق أول عمود */
+  }
+
+  /* العناوين والسطور والقوائم تتوسط وتسمح باللف */
+  .foot-title{
+    white-space: normal;           /* يسمح بالنزول لسطرين لو لزم */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .foot-list,
+  .foot-lines{
+    align-items: center;
+    text-align: center;            /* تغطّي RTL/LTR وتضمن التوسّط */
+    gap: 10px;                     /* ↑ مسافة بين العناصر */
+  }
+
+  /* السوشيال: أكبر وأوضح للمس */
+  .social{ justify-content: center; gap: 10px; }
+  .social a{ width: 40px; height: 40px; }      /* ↑ مساحة النقر */
+  .social a i{ font-size: 18px; }
+
+  /* وصف البراند يتمدد بعرض مريح */
+  .brand-block{ gap: 14px; }
+  .foot-desc{ max-width: 90%; }
+
+  /* شريط الحقوق */
+  .foot-bottom{ margin-top: 18px; padding: 12px 0; }
+}

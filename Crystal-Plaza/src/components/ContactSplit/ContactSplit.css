@@ -1,0 +1,116 @@
+:root{
+  /* استخدم نفس ألوان IntroSplit لو حاب */
+  --bage: #FBFAF5;
+}
+
+/* القسم ككل */
+.contact-band {
+  width: 100%;
+  margin-bottom: 40px;
+  background-color: var(--bage);
+  border-radius: 14px;
+}
+
+/* نفس الحاوية لعنوان القسم والصف تحتها */
+.contact-inner {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding: 8px;
+}
+
+/* عنوان القسم */
+.contact-heading {
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 28px;
+  position: relative;
+  line-height: 1.2;
+  display: block;
+  margin-inline: auto;
+  width: fit-content;
+  font-size: clamp(22px, 3.6vw, 34px);
+  color: var(--blue);
+}
+.contact-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 80px;
+  border-radius: 3px;
+  background: var(--brown);
+}
+
+/* الصف: 70% من حاوية العنوان ومتمركز تمامًا تحتها */
+.wide-row {
+  width: 100%;
+  margin-inline: auto;              /* يوسّط الصف داخل .contact-inner */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 16px;
+  /* لا نعتمد على vw حتى يطابق محور العنوان */
+}
+
+/* البانيلز */
+.panel {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;                    /* لتمديد الطفل الداخلي */
+  align-items: stretch;
+  border: 1px solid color-mix(in srgb, var(--brown) 20%, transparent);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+  min-height: 300px;
+  padding: 18px 16px;
+}
+.mui-rtl-1r7svoy-MuiStack-root{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+/* الطفل داخل panel يمتد بعرض كامل */
+.panel > * {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+/* معلومات التواصل */
+.contact-title { font-weight: 700; font-size: 24px; color: var(--blue); }
+.contact-lines { color: #2f3e3b; }
+.contact-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+.contact-line i {
+  font-size: 16px;
+  color: var(--blue);
+}
+
+/* الخريطة داخل البانيل */
+.map-embed {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+
+/* الجوال */
+@media (max-width: 900px) {
+  .wide-row {
+    width: 100%;                    /* تمتلئ عرض الحاوية على الجوال */
+    grid-template-columns: 1fr;
+  }
+  .panel,
+  .map-embed { min-height: 280px; }
+}

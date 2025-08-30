@@ -1,0 +1,126 @@
+:root {
+  --brown: #8C6E4A;
+  --bage: #F3E9DD;
+  --dark-blue:#1A3C6E;
+  --brand-gold: #C9A34E;
+}
+
+.navbar-appbar {
+  background-color: var(--brown);
+  border-bottom: none;
+  
+}
+
+/* شبكة: 3 أعمدة */
+.navbar-toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;      /* 🔹 قللنا الارتفاع */
+  min-height: 30px;    /* 🔹 بدل 64px الافتراضية لماتيريال */
+}
+
+.navbar-toolbar.ltr { direction: ltr; }
+.navbar-toolbar.rtl { direction: rtl; }
+
+/* زر المنيو */
+.navbar-menu-btn {
+  grid-column: 1;
+  color: #fff;
+  display: none;
+}
+
+/* الشعار */
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+.navbar-logo img { width: 26px; height: 26px; object-fit: contain; } /* 🔹 أصغر */
+.navbar-logo .brand-text {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;   /* 🔹 أصغر */
+}
+
+/* الروابط */
+.navbar-links {
+  grid-column: 2;
+  justify-self: center;
+}
+.nav-btn {
+  text-transform: none;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0.95;
+  font-size: 0.85rem;  /* 🔹 أصغر */
+  padding: 2px 8px;    /* 🔹 أنحف */
+  min-width: unset;
+}
+.nav-btn:hover { opacity: 1; text-decoration: underline; }
+
+/* الأكشنز */
+.navbar-actions {
+  grid-column: 3;
+}
+.navbar-lang-btn {
+  color: var(--gold);
+  padding: 4px;
+}
+.navbar-lang-btn .bi { font-size: 20px; }
+.navbar-lang-btn:hover { opacity: 0.85; }
+
+/* Drawer */
+.navbar-drawer { width: min(80vw, 340px); }
+.navbar-drawer.rtl { direction: rtl; }
+.navbar-drawer.ltr { direction: ltr; }
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+}
+.drawer-title { font-weight: 700; font-size: 1rem; }
+.drawer-link .MuiListItemText-primary { font-weight: 600; font-size: 0.9rem; }
+
+/* ✅ أسفل القائمة: معلومات الاتصال */
+.drawer-contact {
+  margin-top: auto;               /* يدفعه للأسفل */
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+  background: #fff;
+}
+.drawer-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 6px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+}
+.drawer-contact-link i {
+  font-size: 16px;
+  opacity: 0.9;
+}
+.drawer-contact-link:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+.drawer-lang { padding: 10px; }
+
+/* موبايل */
+@media (max-width: 900px) {
+  .navbar-toolbar { grid-template-columns: auto 1fr auto; }
+  .navbar-links { display: none; }
+  .navbar-menu-btn { display: inline-flex; }
+}
+
+/* ما نحتاج هذا هنا، لكنه كان في ملفك */
+.topbar-divider{display: none;}

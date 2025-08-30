@@ -1,0 +1,99 @@
+:root {
+  --brown: #9B7A50;
+  --brown-text: #6B5A43;
+  --brand-gold: #C9A34E;
+  --dark-blue:#1A3C6E;
+}
+
+.topbar-appbar {
+  background-color: #fff;
+  
+}
+
+.topbar-toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+}
+
+.topbar-contact { 
+  justify-self: start;
+  display: inline-flex;        /* عمودي */
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 6px;
+}
+.topbar-logo    { justify-self: center; }
+.topbar-lang    { justify-self: end; }
+
+/* شعار */
+.topbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.topbar-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* تواصل — الأيقونة دائمًا يسار النص وثابتة */
+.topbar-contact .contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--dark-blue);
+  font-weight: 500;
+  line-height: 1.25;
+  font-size: 0.98rem;
+
+  /* تثبيت ترتيب المحتوى داخليًا بغضّ النظر عن RTL/LTR */
+  direction: ltr;
+  unicode-bidi: plaintext;
+}
+.topbar-contact .contact-link i { 
+  font-size: 15px; 
+  order: 0;                /* الأيقونة قبل النص */
+}
+
+/* لغة: أيقونة */
+.topbar-lang-btn {
+  color: var(--dark-blue);
+  padding: 6px;
+  border-radius: 50%;
+}
+.topbar-lang-btn .bi { font-size: 24px; }
+.topbar-lang-btn:hover { opacity: 0.85; }
+
+/* فاصل */
+.topbar-divider {
+  height: 10px;
+  background-color: var(--brown);
+}
+
+/* تجاوب */
+@media (max-width: 902px) {
+  .topbar-toolbar { grid-template-columns: 1fr auto 1fr; }
+  .topbar-logo .brand-text { display: none; }
+.topbar-contact { display: none; }
+.topbar-toolbar {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+}
+
+/* إخفاء معلومات الاتصال على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  
+  .topbar-logo img { width: 44px; height: 44px; }
+  .topbar-toolbar {
+    display: flex;
+    justify-content: space-around;
+  }
+}

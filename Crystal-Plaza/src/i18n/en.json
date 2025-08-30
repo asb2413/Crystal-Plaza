@@ -1,0 +1,8 @@
+{
+  "partners": {
+    "title": "Our Partners",
+    "prev": "Prev",
+    "next": "Next",
+    "names": { "one":"...", "two":"...", "three":"...", "four":"..." }
+  }
+}

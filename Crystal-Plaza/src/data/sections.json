@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "slugAr": "كنب",
+    "slugEn": "sofas",
+    "titleAr": "الكنب بأنواعه",
+    "titleEn": "Sofas",
+    "heroImage": "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+    "samples": [
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png"
+    ]
+  },
+  {
+    "id": 2,
+    "slugAr": "ستائر",
+    "slugEn": "curtains",
+    "titleAr": "الستائر",
+    "titleEn": "Curtains",
+    "heroImage": "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+    "samples": [
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png"
+    ]
+  },
+  {
+    "id": 3,
+    "slugAr": "سجاد",
+    "slugEn": "rugs",
+    "titleAr": "السجاد",
+    "titleEn": "Rugs",
+    "heroImage": "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+    "samples": [
+      "/src/assets/images/sections/rugs/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+      "/src/assets/images/sections/rugs/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png"
+    ]
+  },
+  {
+    "id": 4,
+    "slugAr": "مفروشات",
+    "slugEn": "bedding",
+    "titleAr": "المفروشات",
+    "titleEn": "Bedding",
+    "heroImage": "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+    "samples": [
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png"
+    ]
+  },
+  {
+    "id": 5,
+    "slugAr": "دواليب",
+    "slugEn": "wardrobes",
+    "titleAr": "الدواليب",
+    "titleEn": "Wardrobes",
+    "heroImage": "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+    "samples": [
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png",
+      "/src/assets/images/sections/ChatGPT Image Aug 23, 2025, 05_31_30 PM.png"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Brand 1",
+    "logo": "/src/assets/images/brands/brand1.png",
+    "url": "#"
+  },
+  {
+    "id": 2,
+    "name": "Brand 2",
+    "logo": "/src/assets/images/brands/brand2.png",
+    "url": "#"
+  },
+  {
+    "id": 3,
+    "name": "Brand 3",
+    "logo": "/src/assets/images/brands/brand3.png",
+    "url": "#"
+  },
+  {
+    "id": 4,
+    "name": "Brand 4",
+    "logo": "/src/assets/images/brands/brand4.png",
+    "url": "#"
+  },
+  {
+    "id": 5,
+    "name": "Brand 5",
+    "logo": "/src/assets/images/brands/brand5.png",
+    "url": "#"
+  }
+]

@@ -1,0 +1,32 @@
+/* src/App.css */
+
+/* Reset بسيط */
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* دعم اتجاه الصفحة (سنتحكم بـ dir على عنصر <html>) */
+html[dir="rtl"] body {
+  text-align: center; /* نعتمد التوسيط بكثرة لتقليل CSS */
+}
+
+html[dir="ltr"] body {
+  text-align: center;
+}
+
+/* صور داخل المقاطع */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* أدوات مساعدة بسيطة */
+.section {
+  
+}

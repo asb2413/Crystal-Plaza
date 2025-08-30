@@ -1,0 +1,35 @@
+.section-detail { }
+
+.section-hero {
+  min-height: 40vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-hero-title {
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.section-samples {
+  padding: 40px 0;
+}
+
+.sample-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.sample-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
